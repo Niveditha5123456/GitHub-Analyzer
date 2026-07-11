@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Repository Report</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="report-container">
+
+<!-- Header -->
+
+<div class="report-header">
+
+<h1>
+AI Repository Report
+</h1>
+
+<a href="analysis.html" class="back-btn">
+<i class="fa-solid fa-arrow-left"></i>
+Back
+</a>
+
+</div>
+
+<!-- Repository Information -->
+
+<div class="report-card">
+
+<h2>
+<i class="fa-brands fa-github"></i>
+Repository Information
+</h2>
+
+<div class="repo-info">
+
+<p><b>Repository :</b> RepoAI</p>
+
+<p><b>Owner :</b> Niveditha</p>
+
+<p><b>Language :</b> Python</p>
+
+<p><b>Stars :</b> 126</p>
+
+<p><b>Forks :</b> 21</p>
+
+<p><b>License :</b> MIT</p>
+
+</div>
+
+</div>
+
+<!-- Health Score -->
+
+<div class="report-card">
+
+<h2>
+Overall Health Score
+</h2>
+
+<div class="health-box">
+
+<div class="big-score">
+
+92%
+
+</div>
+
+<div>
+
+<h3>Excellent Repository</h3>
+
+<p>
+
+This repository follows good software engineering practices and is suitable for open-source collaboration.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Charts -->
+
+<div class="chart-grid">
+
+<div class="chart-card">
+
+<h2>Repository Quality</h2>
+
+<canvas id="qualityChart"></canvas>
+
+</div>
+
+<div class="chart-card">
+
+<h2>Issue Distribution</h2>
+
+<canvas id="issueChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- README -->
+
+<div class="report-card">
+
+<h2>
+
+README Analysis
+
+</h2>
+
+<p>
+
+✔ Good project description.
+
+<br><br>
+
+✔ Installation guide available.
+
+<br><br>
+
+✔ Usage examples included.
+
+<br><br>
+
+❌ Screenshots missing.
+
+<br><br>
+
+❌ Contribution guidelines missing.
+
+</p>
+
+</div>
+
+<!-- Missing -->
+
+<div class="report-card">
+
+<h2>
+
+Missing Files
+
+</h2>
+
+<ul>
+
+<li>CONTRIBUTING.md</li>
+
+<li>SECURITY.md</li>
+
+<li>CODE_OF_CONDUCT.md</li>
+
+</ul>
+
+</div>
+
+<!-- Security -->
+
+<div class="report-card">
+
+<h2>
+
+Security Analysis
+
+</h2>
+
+<p>
+
+No critical vulnerabilities detected.
+
+Dependency versions should be updated regularly.
+
+</p>
+
+</div>
+
+<!-- AI -->
+
+<div class="report-card">
+
+<h2>
+
+AI Recommendations
+
+</h2>
+
+<ul>
+
+<li>Add unit testing.</li>
+
+<li>Improve documentation.</li>
+
+<li>Add CI/CD pipeline.</li>
+
+<li>Improve folder structure.</li>
+
+<li>Add project screenshots.</li>
+
+</ul>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="report-buttons">
+
+<button class="download-btn">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+Download PDF
+
+</button>
+
+<button class="share-btn">
+
+<i class="fa-solid fa-share-nodes"></i>
+
+Share Report
+
+</button>
+
+<button class="analyze-btn">
+
+Analyze Another Repository
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+new Chart(document.getElementById("qualityChart"),{
+
+type:"doughnut",
+
+data:{
+
+labels:["Structure","README","Testing","Security"],
+
+datasets:[{
+
+data:[92,88,70,95],
+
+backgroundColor:[
+"#F7B731",
+"#FFD166",
+"#E67E22",
+"#C98C00"
+]
+
+}]
+
+}
+
+});
+
+new Chart(document.getElementById("issueChart"),{
+
+type:"bar",
+
+data:{
+
+labels:["Documentation","Testing","Security","Configuration"],
+
+datasets:[{
+
+label:"Issues",
+
+data:[2,3,0,1],
+
+backgroundColor:"#F7B731"
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
