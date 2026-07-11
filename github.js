@@ -79,6 +79,24 @@ const allLanguages = Object.keys(langData).join(", ");
         recommendations.forEach(item => {
             aiList.innerHTML += `<li>${item}</li>`;
         });
+        let score = 100;
+
+        if (!data.description) score -= 10;
+        if (!data.license) score -= 10;
+        if (data.open_issues_count > 10) score -= 10;
+
+        let status = "Excellent";
+
+        if (score < 90) status = "Good";
+        if (score < 70) status = "Average";
+
+    document.getElementById("recentTable").innerHTML = `
+    <tr>
+        <td>${data.name}</td>
+        <td>${score}%</td>
+        <td>${status}</td>
+    </tr>
+    `;
 
     }
 
